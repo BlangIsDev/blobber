@@ -10,13 +10,13 @@ function move(){
 document.addEventListener("keydown", (e)=>{
   const step = 100;
 
-  if (e.key === "ArrowUp") {
+  if (e.key === "w") {
     ypos -= step;
-  } else if (e.key === "ArrowDown") {
+  } else if (e.key === "s") {
     ypos += step;
-  } else if (e.key === "ArrowLeft") {
+  } else if (e.key === "d") {
     xpos -= step;
-  } else if (e.key === "ArrowRight") {
+  } else if (e.key === "a") {
     xpos += step;
   }
 
