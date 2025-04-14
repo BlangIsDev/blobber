@@ -11,6 +11,7 @@ a{
   width: 25px;
   height:25px;
   background-color:blue;
+  color: red;
   animation: float 2s infinite
 }
 a:hover{
@@ -24,7 +25,7 @@ a:hover{
     transform: translateY(0);
   }
   50%{
-    transform: translateY(50px);
+    transform: translateY(50);
   }
   100%{
 transform: translateY(0)}
