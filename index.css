@@ -6,6 +6,19 @@ body{
   background-color: aquamarine;
 }
 
+a{
+  border: solid 5px black
+  width: 25px;
+  height:25px;
+  background-color:blue;
+  animation: float 2s infinite
+}
+a:hover{
+  background-color: green;
+  width: 30px;
+  height:30px;
+}
+
 @keyframes float{
   0%{
     transform: translateY(0);
