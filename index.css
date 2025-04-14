@@ -2,5 +2,17 @@
   color: red;
 }
 body{
-  font-
+  font-family: consolas;
+  background-color: aquamarine;
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(50px);
+  }
+  100%{
+transform: translateY(0)}
 }
