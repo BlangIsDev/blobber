@@ -5,8 +5,8 @@
   border-radius: 5px;
   position: absolute;
 }
-.px10{
-  length: 10px;
-  background-color:black;
-  width: 5px;
+.red {
+  width: 10px;
+  height: 10px;
+  background-color: red;
 }
