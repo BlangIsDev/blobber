@@ -4,7 +4,7 @@ let ypos= 100;
 
 function move(){
   blobber.style.left =  `${xpos}px`;
-  blobbler.style.top =  `${ypos}px`;
+  blobber.style.top =  `${ypos}px`;
 }
 
 document.addEventListener("keydown", (e)=>{
