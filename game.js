@@ -8,7 +8,7 @@ function move(){
 }
 
 document.addEventListener("keydown", (e)=>{
-  const step = 10;
+  const step = 100;
 
   if (e.key === "ArrowUp") {
     ypos -= step;
