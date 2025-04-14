@@ -11,13 +11,13 @@ document.addEventListener("keydown", (e)=>{
   const step = 10;
 
   if (e.key === "ArrowUp") {
-    y -= step;
+    ypos -= step;
   } else if (e.key === "ArrowDown") {
-    y += step;
+    ypos += step;
   } else if (e.key === "ArrowLeft") {
-    x -= step;
+    xpos -= step;
   } else if (e.key === "ArrowRight") {
-    x += step;
+    xpos += step;
   }
 
   move();
