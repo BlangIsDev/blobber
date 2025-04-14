@@ -3,11 +3,11 @@ let xpos = 100;
 let ypos= 100;
 
 function move(){
-  blobbber.style.left =  `${xpos}px`;
+  blobber.style.left =  `${xpos}px`;
   blobbler.style.top =  `${ypos}px`;
 }
 
-document.addEventLister("keydoown", (e)=>{
+document.addEventListener("keydown", (e)=>{
   const step = 10;
 
   if (e.key === "ArrowUp") {
