@@ -40,6 +40,8 @@ document.addEventListener("keydown", (e)=>{
     targetX -= step;
   } else if (e.key === "ArrowRight") {
     targetX += step;
+  }  else if(e.key === " "){
+    const speed = prompt("what speed?");
   }
 
   move();
