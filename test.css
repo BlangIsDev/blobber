@@ -1,0 +1,13 @@
+.container {
+  position: relative; /* Important: this makes the child position relative to this */
+  width: 100%;
+  height: 100vh; /* Full viewport height, adjust if needed */
+}
+
+.corner-element {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background: lightblue;
+}
