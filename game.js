@@ -5,7 +5,7 @@ let ypos= 100;
 let targetX = xpos;
 let targetY = ypos;
 
-const speed = 2;
+const speed = 10;
 
 function move(){
   const dx = targetX-xpos;
