@@ -21,4 +21,4 @@ document.addEventListener("keydown", (e)=>{
   }
 
   move();
-}
+})
