@@ -14,9 +14,9 @@ document.addEventListener("keydown", (e)=>{
     ypos -= step;
   } else if (e.key === "s") {
     ypos += step;
-  } else if (e.key === "d") {
-    xpos -= step;
   } else if (e.key === "a") {
+    xpos -= step;
+  } else if (e.key === "d") {
     xpos += step;
   }
 
