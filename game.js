@@ -41,7 +41,7 @@ document.addEventListener("keydown", (e)=>{
   } else if (e.key === "ArrowRight") {
     targetX += step;
   }  else if(e.key === " "){
-    const newSpeed = parseInt(prompt("what speed?"));
+    const newSpeed = parseFloat(prompt("what speed?"));
     if(!isNaN(newSpeed)){
       speed = newSpeed;
     }
