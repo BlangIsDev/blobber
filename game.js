@@ -18,6 +18,14 @@ document.addEventListener("keydown", (e)=>{
     xpos -= step;
   } else if (e.key === "d") {
     xpos += step;
+  } else if (e.key === "UpArrow") {
+    ypos -= step;
+  } else if (e.key === "DownArrow") {
+    ypos += step;
+  } else if (e.key === "LeftArrow") {
+    xpos -= step;
+  } else if (e.key === "RightArrow") {
+    xpos += step;
   }
 
   move();
