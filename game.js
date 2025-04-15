@@ -2,7 +2,21 @@ const blobber = document.querySelector(".blobber");
 let xpos = 100;
 let ypos= 100;
 
+let targetX = xpos;
+let targetY = ypos;
+
+const speed = 2;
+
 function move(){
+  const dx = targetX-xpos;
+  const dy = targetY-ypos;
+  const dis = Math.sqrt(dx*dx+dy*dy);
+
+  if(dis>1){
+    xpos += (dx/dis) * speed;
+    ypos += (dy/dis) * speed;
+  }
+  
   blobber.style.left =  `${xpos}px`;
   blobber.style.top =  `${ypos}px`;
 }
@@ -11,21 +25,21 @@ document.addEventListener("keydown", (e)=>{
   const step = 10;
 
   if (e.key === "w") {
-    ypos -= step;
+    targetY -= step;
   } else if (e.key === "s") {
-    ypos += step;
+    targetY += step;
   } else if (e.key === "a") {
-    xpos -= step;
+    targetX -= step;
   } else if (e.key === "d") {
-    xpos += step;
+    targetX += step;
   } else if (e.key === "ArrowUp") {
-    ypos -= step;
+    targetY -= step;
   } else if (e.key === "ArrowDown") {
-    ypos += step;
+    targetY += step;
   } else if (e.key === "ArrowLeft") {
-    xpos -= step;
+    targetX -= step;
   } else if (e.key === "ArrowRight") {
-    xpos += step;
+    targetX += step;
   }
 
   move();
