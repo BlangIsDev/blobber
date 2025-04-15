@@ -5,7 +5,7 @@ let ypos= 100;
 let targetX = xpos;
 let targetY = ypos;
 
-const speed = 10;
+let speed = 10;
 
 function move(){
   const dx = targetX-xpos;
@@ -41,7 +41,10 @@ document.addEventListener("keydown", (e)=>{
   } else if (e.key === "ArrowRight") {
     targetX += step;
   }  else if(e.key === " "){
-    const speed = prompt("what speed?");
+    const newSpeed = parseInt(prompt("what speed?"));
+    if(!isNaN(newSpeed)){
+      speed = newSpeed;
+    }
   }
 
   move();
