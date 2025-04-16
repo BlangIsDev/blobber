@@ -40,7 +40,8 @@ function rBlocks(){
     block.classList.add("block")
 
    const blockSize = 50;
-   const maxX = window.innerWidth - blockSize;   const maxY = window.innerHeight - blockSize;
+   const maxX = window.innerWidth - blockSize;
+   const maxY = window.innerHeight - blockSize;
 
    const randX = Math.floor(Math.random() * maxX);
    const randY = Math.floor(Math.random() * maxY);
