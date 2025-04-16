@@ -10,6 +10,9 @@ let targetY = ypos;
 
 let speed = 10;
 
+let blocks = []
+const blockcount = 10
+
 function move(){
   if(!ismov)return;
   
@@ -45,19 +48,21 @@ function rBlocks(){
    block.style.top = `${randY}px`;
 
    blockcontain.appendChild(block);
-   block.push(block);
+   blocks.push(block);
   }
 }
 
 function checkCollision(){
   const blobHit = blobber.getBoundingClientRect();
+
+  for(let block of blocks){
   const blockHit = block.getBoundingClientRect();
 
   const collision = !(
-    blobHit.right < block.left||
-    blobHit.left > block.right||
+    blobHit.right < blockHit.left||
+    blobHit.left > blockHit.right||
     blobHit.bottom < blockHit.top||
-    blobHit.top > block.bottom
+    blobHit.top > blockHit.bottom
   );
 
   if(collision){
@@ -65,8 +70,11 @@ function checkCollision(){
     ismov = false;
     addEventListener("keydown", ()=>{
       ismov = true;
+      rBlocks()
       move();
-    })
+    }, { once : true });
+    break;
+   }
   }
 }
 
