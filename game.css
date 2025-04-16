@@ -1,6 +1,8 @@
 .blobber{
   width: 30px;
   height: 60px;
+  left: 0px;
+  top: 0px;
   background-color: lightblue;
   border-radius: 10px;
   position: absolute;
@@ -10,4 +12,10 @@
   height: 30px;
   background-color: red;
   position: absolute;
+}
+.block-contain{
+  position: absolute;
+  left: 100;
+  top: 100;
+
 }
