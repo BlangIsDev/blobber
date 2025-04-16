@@ -10,11 +10,11 @@ let targetY = ypos;
 
 let speed = 10;
 
-let blocks = []
-const blockcount = 10
+let blocks = [];
+const blockcount = 10;
 
 function move(){
-  if(!ismov)return;
+  if(!ismov) return;
   
   const dx = targetX-xpos;
   const dy = targetY-ypos;
@@ -36,8 +36,8 @@ function rBlocks(){
   blocks = [];
 
   for(let i = 0; i < blockcount; i++){
-    let block = document.createElement("div")
-    block.classList.add("block")
+    let block = document.createElement("div");
+    block.classList.add("block");
 
    const blockSize = 50;
    const maxX = window.innerWidth - blockSize;
@@ -72,7 +72,7 @@ function checkCollision(){
     ismov = false;
     addEventListener("keydown", ()=>{
       ismov = true;
-      rBlocks()
+      rBlocks();
       move();
     }, { once : true });
     break;
