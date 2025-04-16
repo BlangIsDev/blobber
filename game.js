@@ -12,7 +12,7 @@ let ypos= 100;
 let targetX = xpos;
 let targetY = ypos;
 
-let speed = 10;
+let speed = 4;
 
 let blocks = [];
 
@@ -73,7 +73,7 @@ function checkCollision(){
   );
 
   if(collision){
-    alert("You died! press a key to continue.");
+    alert("You died! press a key to ok.");
     ismov = false;
     addEventListener("keydown", ()=>{
       ismov = true;
