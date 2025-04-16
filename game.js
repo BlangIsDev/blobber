@@ -1,3 +1,5 @@
+rBlocks()
+
 let ismov = true;
 
 const blobber = document.querySelector(".blobber");
