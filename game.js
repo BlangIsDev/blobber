@@ -1,4 +1,7 @@
+let ismov = true;
+
 const blobber = document.querySelector(".blobber");
+const block = document.querySelector(".block");
 let xpos = 100;
 let ypos= 100;
 
@@ -8,6 +11,8 @@ let targetY = ypos;
 let speed = 10;
 
 function move(){
+  if(!ismov)return;
+  
   const dx = targetX-xpos;
   const dy = targetY-ypos;
   const dis = Math.sqrt(dx*dx+dy*dy);
@@ -19,6 +24,40 @@ function move(){
   
   blobber.style.left =  `${xpos}px`;
   blobber.style.top =  `${ypos}px`;
+  
+  checkCollision()
+}
+
+function rBlocks(){
+  
+}
+
+  const rx = Math.floor(Math.random() * maxX);
+  const ry = Math.floor(Math.random() * maxY);
+
+  block.style.left = `${rx}px`;
+  block.style.left = `${ry}px`;
+}
+
+function checkCollision(){
+  const blobHit = blobber.getBoundingClientRect();
+  const blockHit = block.getBoundingClientRect();
+
+  const collision = !(
+    blobHit.right < block.left||
+    blobHit.left > block.right||
+    blobHit.bottom < blockHit.top||
+    blobHit.top > block.bottom
+  );
+
+  if(collision){
+    alert("You died! press a key to continue.");
+    ismov = false;
+    addEventListener("keydown", ()=>{
+      ismov = true;
+      move();
+    })
+  }
 }
 
 document.addEventListener("keydown", (e)=>{
