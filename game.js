@@ -1,7 +1,7 @@
 let ismov = true;
 
 const blobber = document.querySelector(".blobber");
-const block = document.querySelector(".block");
+const blockcontain = document.querySelector(".block-contain");
 let xpos = 100;
 let ypos= 100;
 
@@ -29,14 +29,24 @@ function move(){
 }
 
 function rBlocks(){
+  blockcontain.innerHTML = "";
+  blocks = [];
+
+  for(let i = 0; i < blockcount; i++){    let block = document.createElement("div")
+  block.classList.add("block")
+
+   const blockSize = 50;
+   const maxX = window.innerWidth - blockSize;   const maxY = window.innerHeight - blockSize;
+
+   const randX = Math.floor(Math.random() * maxX);
+   const randY = Math.floor(Math.random() * maxY);
   
-}
+   block.style.left = `${randX}px`;
+   block.style.top = `${randY}px`;
 
-  const rx = Math.floor(Math.random() * maxX);
-  const ry = Math.floor(Math.random() * maxY);
-
-  block.style.left = `${rx}px`;
-  block.style.left = `${ry}px`;
+   blockcontain.appendChild(block);
+   block.push(block);
+  }
 }
 
 function checkCollision(){
