@@ -3,18 +3,18 @@
     transform: rotate(-10deg);
   }
   50%{
-    transform: rotate(10deg)
+    transform: rotate(10deg);
   }
 }
 
 .title{
-  color: lightblue
-  animation: wiggle 2s infinite
+  color: lightblue;
+  animation: wiggle 2s infinite;
 }
 .survival{
-  color: blue
-  background-color: darkblue;
+  color: blue;
+  background-color: darkblue;;
 }
-.survival: hover{
-  background-color:aquamarine
+.survival:hover{
+  background-color:aquamarine;
 }
