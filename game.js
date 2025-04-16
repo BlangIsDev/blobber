@@ -1,4 +1,6 @@
-rBlocks()
+document.addEventListener("DOMContentLoaded", ()=>{
+  rBlocks();
+})
 
 let ismov = true;
 
