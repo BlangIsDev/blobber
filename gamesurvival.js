@@ -16,7 +16,7 @@ let speed = 4;
 
 let blocks = [];
 
-function move(){
+function move(what){
   if(!ismov) return;
   
   const dx = targetX-xpos;
@@ -28,10 +28,10 @@ function move(){
     ypos += (dy/dis) * speed;
   }
   
-  blobber.style.left =  `${xpos}px`;
-  blobber.style.top =  `${ypos}px`;
+  what.style.left =  `${xpos}px`;
+  what.style.top =  `${ypos}px`;
   
-  checkCollision()
+  checkCollision(blobber);
 }
 
 function rBlocks(){
@@ -59,17 +59,17 @@ function rBlocks(){
   }
 }
 
-function checkCollision(){
-  const blobHit = blobber.getBoundingClientRect();
+function checkCollision(thingOne){
+  const oneHit = thingOne.getBoundingClientRect();
 
   for(let block of blocks){
-  const blockHit = block.getBoundingClientRect();
+  const twoHit = block.getBoundingClientRect();
 
   const collision = !(
-    blobHit.right < blockHit.left||
-    blobHit.left > blockHit.right||
-    blobHit.bottom < blockHit.top||
-    blobHit.top > blockHit.bottom
+    oneHit.right < twoHit.left||
+    thingHit.left > twoHit.right||
+    oneHit.bottom < twoHit.top||
+    oneHit.top > twoHit.bottom
   );
 
   if(collision){
@@ -104,12 +104,6 @@ document.addEventListener("keydown", (e)=>{
     targetX -= step;
   } else if (e.key === "ArrowRight") {
     targetX += step;
-  }  else if(e.key === " "){
-    const newSpeed = parseFloat(prompt("what speed?"));
-    if(!isNaN(newSpeed)){
-      speed = newSpeed;
-    }
   }
-
   move();
 })
