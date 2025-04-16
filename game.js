@@ -15,7 +15,6 @@ let targetY = ypos;
 let speed = 10;
 
 let blocks = [];
-const blockcount = Math.floor(Math.random() * 100);
 
 function move(){
   if(!ismov) return;
@@ -38,6 +37,8 @@ function move(){
 function rBlocks(){
   blockcontain.innerHTML = "";
   blocks = [];
+
+  const blockcount = Math.floor(Math.random() * 100);
 
   for(let i = 0; i < blockcount; i++){
     let block = document.createElement("div");
