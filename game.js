@@ -38,7 +38,7 @@ function rBlocks(){
   blockcontain.innerHTML = "";
   blocks = [];
 
-  const blockcount = Math.floor(Math.random() * 100);
+  const blockcount = Math.floor(Math.random() * 81) + 20;
 
   for(let i = 0; i < blockcount; i++){
     let block = document.createElement("div");
