@@ -35,8 +35,9 @@ function rBlocks(){
   blockcontain.innerHTML = "";
   blocks = [];
 
-  for(let i = 0; i < blockcount; i++){    let block = document.createElement("div")
-  block.classList.add("block")
+  for(let i = 0; i < blockcount; i++){
+    let block = document.createElement("div")
+    block.classList.add("block")
 
    const blockSize = 50;
    const maxX = window.innerWidth - blockSize;   const maxY = window.innerHeight - blockSize;
