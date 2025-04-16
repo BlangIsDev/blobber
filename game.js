@@ -15,7 +15,7 @@ let targetY = ypos;
 let speed = 10;
 
 let blocks = [];
-const blockcount = 10;
+const blockcount = Math.floor(Math.random() * 100);
 
 function move(){
   if(!ismov) return;
