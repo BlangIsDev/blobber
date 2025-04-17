@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 let ismov = true;
 
-const blobber = document.querySelector(".blobber");
+const blobber = document.querySelector(".blobber-real");
 const blockcontain = document.querySelector(".block-contain");
 let xpos = 100;
 let ypos= 100;
@@ -59,11 +59,11 @@ function rBlocks(){
   }
 }
 
-function checkCollision(thingOne){
+function checkCollision(thingOne, thingTwo){
   const oneHit = thingOne.getBoundingClientRect();
 
   for(let block of blocks){
-  const twoHit = block.getBoundingClientRect();
+  const twoHit = thingTwo.getBoundingClientRect();
 
   const collision = !(
     oneHit.right < twoHit.left||
