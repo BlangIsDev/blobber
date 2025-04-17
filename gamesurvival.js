@@ -38,7 +38,7 @@ function rBlocks(){
   blockcontain.innerHTML = "";
   blocks = [];
 
-  const blockcount = Math.floor(Math.random() * 81) + 20;
+  const blockcount = Math.floor(Math.random() * 21) + 80;
 
   for(let i = 0; i < blockcount; i++){
     let block = document.createElement("div");
@@ -67,13 +67,13 @@ function checkCollision(thingOne, thingTwo){
 
   const collision = !(
     oneHit.right < twoHit.left||
-    thingHit.left > twoHit.right||
+    oneHit.left > twoHit.right||
     oneHit.bottom < twoHit.top||
     oneHit.top > twoHit.bottom
   );
 
   if(collision){
-    alert("You died! press a key to ok.");
+    alert("You died! press a key to start over.");
     ismov = false;
     addEventListener("keydown", ()=>{
       ismov = true;
