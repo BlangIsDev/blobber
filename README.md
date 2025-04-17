@@ -1,2 +1,2 @@
 # game
-working on obstackes
+working on level endings
