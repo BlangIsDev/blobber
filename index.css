@@ -1,6 +1,6 @@
 @keyframes wiggle{
   0%, 100%{
-    transform: rotate(-10deg);
+    transform: rotate(0deg);
   }
   50%{
     transform: rotate(10deg);
@@ -13,7 +13,7 @@
 }
 .survival{
   color: blue;
-  background-color: darkblue;;
+  background-color: darkblue;
 }
 .survival:hover{
   background-color:aquamarine;
