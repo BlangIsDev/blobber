@@ -7,12 +7,13 @@ body{
 }
 
 a{
-  border: solid 5px black
+  display: inline-block;
+  border: solid 5px black;
   width: 25px;
   height:25px;
   background-color:blue;
   color: red;
-  animation: float 2s infinite
+  animation: float 2s infinite;
 }
 a:hover{
   background-color: green;
@@ -25,8 +26,9 @@ a:hover{
     transform: translateY(0);
   }
   50%{
-    transform: translateY(50);
+    transform: translateY(50px);
   }
   100%{
-transform: translateY(0)}
+transform: translateY(0)
+  }
 }
