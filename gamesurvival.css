@@ -1,4 +1,7 @@
 .blobber-back{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   width: 30px;
   height: 60px;
   left: 0px;
@@ -6,6 +9,13 @@
   background-color: lightblue;
   border-radius: 10px;
   position: absolute;
+}
+.blobber-eye{
+  margin-top: 5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: black;
 }
 .block{
   width: 30px;
