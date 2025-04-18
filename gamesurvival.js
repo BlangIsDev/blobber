@@ -29,9 +29,20 @@ function move(what){
   }
   
   what.style.left =  `${xpos}px`;
-  what.style.top =  `${ypos}px`;
-  
-  checkCollision(blobber);
+  what.style.top =   `${ypos}px`;
+
+  for(let block of blocks){
+    if(checkCollision(blobber, block)){
+      alert("You died! Press a key to continue.");
+      ismov = false;
+      document.addEventListener("keydown", ()=>{
+        ismov = true;
+        move(blobber);
+        rBlocks();
+      }, { once : true })
+      return;
+    }
+  }
 }
 
 function rBlocks(){
@@ -61,8 +72,6 @@ function rBlocks(){
 
 function checkCollision(thingOne, thingTwo){
   const oneHit = thingOne.getBoundingClientRect();
-
-  for(let block of blocks){
   const twoHit = thingTwo.getBoundingClientRect();
 
   const collision = !(
@@ -71,18 +80,7 @@ function checkCollision(thingOne, thingTwo){
     oneHit.bottom < twoHit.top||
     oneHit.top > twoHit.bottom
   );
-
-  if(collision){
-    alert("You died! press a key to start over.");
-    ismov = false;
-    addEventListener("keydown", ()=>{
-      ismov = true;
-      rBlocks();
-      move();
-    }, { once : true });
-    break;
-   }
-  }
+  return collision;
 }
 
 document.addEventListener("keydown", (e)=>{
@@ -105,5 +103,5 @@ document.addEventListener("keydown", (e)=>{
   } else if (e.key === "ArrowRight") {
     targetX += step;
   }
-  move();
+  move(blobber);
 })
