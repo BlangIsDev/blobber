@@ -61,8 +61,11 @@ function rBlocks(){
    const maxX = window.innerWidth - blockSize;
    const maxY = window.innerHeight - blockSize;
 
-   const randX = Math.floor(Math.random() * maxX);
-   const randY = Math.floor(Math.random() * maxY);
+   let randX = Math.floor(Math.random() * maxX);
+   let randY = Math.floor(Math.random() * maxY);
+
+    randX = Math.max(0, Math.min(randX, maxX));
+    randY = Math.max(0, Math.min(randY, maxY));
   
    block.style.left = `${randX}px`;
    block.style.top = `${randY}px`;
