@@ -15,7 +15,8 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: black;
+  background-color: white;
+  border: solid 3px black;
 }
 .block{
   width: 30px;
@@ -25,7 +26,7 @@
 }
 .block-contain{
   position: absolute;
-  left: 100;
-  top: 100;
+  left: 100px;
+  top: 100px;
 
 }
