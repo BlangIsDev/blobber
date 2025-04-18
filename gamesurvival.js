@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
   rBlocks();
 })
 
+
 let ismov = true;
 
 const blobber = document.querySelector(".blobber-real");
 const blockcontain = document.querySelector(".block-contain");
+
 let xpos = 100;
 let ypos= 100;
 
@@ -28,8 +30,8 @@ function move(what){
     ypos += (dy/dis) * speed;
   }
   
-  what.style.left =  `${xpos}px`;
-  what.style.top =   `${ypos}px`;
+  what.style.left = `${xpos}px`;
+  what.style.top = `${ypos}px`;
 
   for(let block of blocks){
     if(checkCollision(blobber, block)){
