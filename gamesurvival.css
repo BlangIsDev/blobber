@@ -19,7 +19,6 @@
   border: solid 3px black;
 }
 .block{
-  box-sizing: border-box;
   width: 30px;
   height: 30px;
   background-color: red;
@@ -27,4 +26,9 @@
 }
 .block-contain{
   position: absolute;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
