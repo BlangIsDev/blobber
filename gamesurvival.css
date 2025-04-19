@@ -19,6 +19,7 @@
   border: solid 3px black;
 }
 .block{
+  box-sizing: border-box;
   width: 30px;
   height: 30px;
   background-color: red;
@@ -26,7 +27,4 @@
 }
 .block-contain{
   position: absolute;
-  left: 100px;
-  top: 100px;
-
 }
