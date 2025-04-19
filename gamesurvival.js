@@ -84,9 +84,9 @@ function checkCollision(thingOne, thingTwo){
     oneHit.bottom < twoHit.top||
     oneHit.top > twoHit.bottom
   );
+rBlocks()
+  
   return collision;
-
-  rBlocks();
 }
 
 document.addEventListener("keydown", (e)=>{
