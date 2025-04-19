@@ -1,14 +1,19 @@
-.blobber-back{
+.blobber-real{
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: absolute;
+  width: 32px;
+  height: 62px;
+  border: solid 2px black
+}
+.blobber-back{
   width: 30px;
   height: 60px;
   left: 0px;
   top: 0px;
   background-color: lightblue;
   border-radius: 10px;
-  position: absolute;
 }
 .blobber-eye{
   margin-top: 5px;
