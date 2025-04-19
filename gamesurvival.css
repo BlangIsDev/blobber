@@ -1,13 +1,12 @@
 .blobber-real{
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   position: absolute;
-  width: 32px;
-  height: 62px;
-  border: solid 2px black
+  width: 34px;
+  height: 64px;
+  border-radius: 10px;
 }
 .blobber-back{
+  display: flex;
+  justify-content: center;
   width: 30px;
   height: 60px;
   left: 0px;
@@ -17,11 +16,11 @@
 }
 .blobber-eye{
   margin-top: 5px;
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: white;
-  border: solid 3px black;
+  border: solid 2px black;
 }
 .block{
   width: 30px;
