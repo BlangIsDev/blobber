@@ -40,7 +40,6 @@ function move(what){
       document.addEventListener("keydown", ()=>{
         ismov = true;
         move(blobber);
-        rBlocks();
       }, { once : true })
       return;
     }
@@ -86,6 +85,8 @@ function checkCollision(thingOne, thingTwo){
     oneHit.top > twoHit.bottom
   );
   return collision;
+
+  rBlocks();
 }
 
 document.addEventListener("keydown", (e)=>{
