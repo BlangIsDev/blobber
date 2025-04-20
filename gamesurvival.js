@@ -40,7 +40,16 @@ function move(what){
       ismov = false;
       document.addEventListener("keydown", ()=>{
         ismov = true;
+        rBlocks();
+        xpos = 100;
+        ypos = 100;
+        targetX = xpos;
+        targetY = ypos;
+        blobber.style.left = `${xpos}px`;
+        blobber.style.top = `${ypos}px`;
         move(blobber);
+
+
       }, { once : true })
       return;
     }
@@ -50,6 +59,13 @@ function move(what){
     ismov = false;
     document.addEventListener("keydown", ()=>{
       ismov = true;
+      rBlocks();
+      xpos = 100;
+      ypos = 100
+      targetX = xpos;
+      targetY = ypos;
+      blobber.style.left = `${xpos}px`;
+      blobber.style.top = `${ypos}px`;
       move(blobber);
     }, { once : true } )
     return;
@@ -94,10 +110,6 @@ function checkCollision(thingOne, thingTwo){
     oneHit.bottom < twoHit.top||
     oneHit.top > twoHit.bottom
   );
-    if(collision){{
-      rBlocks();
-    }
-  
   return collision;
 }
 
