@@ -7,6 +7,7 @@ let ismov = true;
 
 const blobber = document.querySelector(".blobber-real");
 const blockcontain = document.querySelector(".block-contain");
+const end = document.querySelector(".endbar");
 
 let xpos = 100;
 let ypos= 100;
@@ -43,6 +44,15 @@ function move(what){
       }, { once : true })
       return;
     }
+  }
+  if(checkCollision(blobber, end)){
+    alert("You win! Press a key to play again.");
+    ismov = false;
+    document.addEventListener("keydown", ()=>{
+      ismov = true;
+      move(blobber);
+    }, { once : true } )
+    return;
   }
 }
 
