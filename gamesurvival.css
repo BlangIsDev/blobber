@@ -31,6 +31,13 @@
 .block-contain{
   position: absolute;
 }
+.endbar{
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 20px;
+  background-color: green;
+}
 *,
 *::before,
 *::after {
