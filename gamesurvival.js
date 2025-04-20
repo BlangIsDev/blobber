@@ -84,7 +84,9 @@ function checkCollision(thingOne, thingTwo){
     oneHit.bottom < twoHit.top||
     oneHit.top > twoHit.bottom
   );
-rBlocks()
+    if(collision){{
+      rBlocks();
+    }
   
   return collision;
 }
