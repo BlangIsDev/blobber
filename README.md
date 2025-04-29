@@ -1,2 +1,2 @@
-# bloobler game
+# blobber game
 done.. for now
