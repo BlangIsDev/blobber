@@ -1,15 +1,5 @@
-@keyframes wiggle{
-  0%, 100%{
-    transform: rotate(0deg);
-  }
-  50%{
-    transform: rotate(10deg);
-  }
-}
-
 .title{
   color: lightblue;
-  animation: wiggle 2s infinite;
 }
 .survival{
   color: blue;
